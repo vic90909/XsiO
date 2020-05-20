@@ -14,7 +14,10 @@ code {
 
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  margin: auto;
+  width: 30%;
+  margin-top: 50px;
+  
 }
 
 ol, ul {
@@ -29,6 +32,7 @@ ol, ul {
 
 .status {
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .square {

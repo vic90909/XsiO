@@ -28,6 +28,7 @@ class Board extends React.Component {
           {this.renderSquare(1)}
           {this.renderSquare(2)}
         </div>
+        
         <div className="board-row">
           {this.renderSquare(3)}
           {this.renderSquare(4)}
@@ -37,6 +38,11 @@ class Board extends React.Component {
           {this.renderSquare(6)}
           {this.renderSquare(7)}
           {this.renderSquare(8)}
+        </div>
+        <div className="board-row">
+          {this.renderSquare(9)}
+          {this.renderSquare(10)}
+          {this.renderSquare(11)}
         </div>
       </div>
     );
@@ -49,7 +55,7 @@ class Game extends React.Component {
     this.state = {
       history: [
         {
-          squares: Array(9).fill(null)
+          squares: Array(12).fill(null)
         }
       ],
       stepNumber: 0,
