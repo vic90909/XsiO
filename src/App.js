@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
 function Square(props) {
@@ -16,33 +16,59 @@ class Board extends React.Component {
       <Square
         value={this.props.squares[i]}
         onClick={() => this.props.onClick(i)}
-      />
+      /> 
     );
+  }
+
+  renderRow(i){   
+      return(
+        <div>
+          {this.renderSquare(i*10)}
+          {this.renderSquare(i*10+1)}
+          {this.renderSquare(i*10+2)}
+          {this.renderSquare(i*10+3)}
+          {this.renderSquare(i*10+4)}
+          {this.renderSquare(i*10+5)}
+          {this.renderSquare(i*10+6)}
+          {this.renderSquare(i*10+7)}
+          {this.renderSquare(i*10+8)}
+          {this.renderSquare(i*10+9)}
+        </div>
+      )
   }
 
   render() {
     return (
       <div>
         <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
+          {this.renderRow(0)}
         </div>
         <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
+          {this.renderRow(1)}
         </div>
         <div className="board-row">
-          {this.renderSquare(9)}
-          {this.renderSquare(10)}
-          {this.renderSquare(11)}
+          {this.renderRow(2)}
+        </div>
+        <div className="board-row">
+          {this.renderRow(3)}
+        </div>
+        <div className="board-row">
+          {this.renderRow(4)}
+        </div>
+        <div className="board-row">
+          {this.renderRow(5)}
+        </div>
+        <div className="board-row">
+          {this.renderRow(6)}
+        </div>
+        <div className="board-row">
+          {this.renderRow(7)}
+        </div>
+        <div className="board-row">
+          {this.renderRow(8)}
+        </div>
+        <div className="board-row">
+          {this.renderRow(9)}
         </div>
       </div>
     );
@@ -55,7 +81,7 @@ class Game extends React.Component {
     this.state = {
       history: [
         {
-          squares: Array(12).fill(null)
+          squares: Array(100).fill(null)
         }
       ],
       stepNumber: 0,
